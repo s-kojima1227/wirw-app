@@ -2,7 +2,7 @@
 FROM node:18-alpine
 
 # 作業ディレクトリを設定
-WORKDIR /usr/src/app
+WORKDIR /app
 
 # 依存関係のコピーとインストール
 COPY package*.json ./
@@ -11,11 +11,8 @@ RUN npm ci
 # アプリケーションのコードをコピー
 COPY . .
 
-# アプリケーションをビルド
-RUN npm run build
-
-# 3000番ポートを公開
-EXPOSE 3000
+# ポートを公開
+EXPOSE 5173
 
 # アプリケーションの実行
-CMD ["npm", "run", "start:dev"]
+CMD ["npm", "run", "dev"]

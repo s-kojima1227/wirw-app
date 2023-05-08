@@ -1,7 +1,16 @@
 version: '3.8'
 
 services:
-  app:
+  frontend:
+    build: ./frontend
+    container_name: wirw-frontend
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+
+  backend:
     build: ./backend
     container_name: wirw-backend
     environment:
