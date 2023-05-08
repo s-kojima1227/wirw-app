@@ -9,3 +9,18 @@ services:
     volumes:
       - ./backend:/usr/src/app
       - /usr/src/app/node_modules
+
+  db:
+    image: postgres:15-alpine3.17
+    container_name: wirw-db
+    environment:
+      POSTGRES_USER: wirw-user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: wirw-db
+    ports:
+      - "15433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
