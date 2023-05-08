@@ -4,6 +4,12 @@ services:
   app:
     build: ./backend
     container_name: wirw-backend
+    environment:
+      DB_HOST: db
+      DB_USER: wirw-user
+      DB_PASSWORD: password
+      DB_NAME: wirw-db
+      DB_PORT: 5432
     ports:
       - "3000:3000"
     volumes:
