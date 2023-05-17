@@ -25,8 +25,10 @@
     "@nestjs/platform-express": "^9.0.0",
     "@prisma/client": "^4.13.0",
     "cors": "^2.8.5",
+    "dayjs": "^1.11.7",
     "reflect-metadata": "^0.1.13",
-    "rxjs": "^7.2.0"
+    "rxjs": "^7.2.0",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@nestjs/cli": "^9.0.0",
