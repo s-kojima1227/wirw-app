@@ -18,6 +18,11 @@ const router = createRouter({
       name: 'BindClass',
       component: () => import('../views/BindClass.vue')
     },
+    {
+      path: '/event-with-other-arg',
+      name: 'EventWithOtherArg',
+      component: () => import('../views/EventWithOtherArg.vue')
+    },
   ]
 })
 
